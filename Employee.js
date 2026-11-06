@@ -8,7 +8,7 @@ export default class Employee{
   get salary(){return this._salary;}
   set salary(value) { this._salary = Number(value);}
   get IsRemote(){return this._IsRemote;}
-  set isRemote(value) { this._isRemote = Boolean(value);}
+  set IsRemote(value) { this._IsRemote = Boolean(value);}
   
   constructor(name,salary,IsRemote){
     this._name=name;
@@ -17,14 +17,14 @@ export default class Employee{
   }
 
   show(){
-    console.log(`Сотрудник:${this._name}, Зарплата:${this._salary}, Удаленка:${this._isRemote ? 'Да' : 'Нет'}`)
+    console.log(`Сотрудник:${this._name}, Зп:${this._salary}, Удаленка:${this._isRemote ? 'Да' : 'Нет'}`)
   }
 
   delete(){
     this._name=null;
     this._salary=null;
     this._IsRemote=null;
-    Object.setPrototypeOf(this.null);
+    Object.setPrototypeOf(this,null);
     console.log('Объект очищен');
   }
 
